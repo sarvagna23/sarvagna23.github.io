@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sai Sarvagna Beeram | Portfolio</title>
+  <meta name="description" content="Sai Sarvagna Beeram builds production agentic AI and ML systems. MS Computer Science at Georgia State University, open to full-time roles starting January 2027." />
+
+  <!-- Fonts: Fraunces for headings, DM Sans for body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Custom cursor: a dot that snaps to the mouse and a ring that trails it -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <!-- Fixed top header -->
+  <header class="site-header">
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- =====================================================
+       PAGE 1: HOME
+       The video never plays; the cursor angle scrubs it.
+       ===================================================== -->
+  <section class="hero" id="hero">
+    <!-- muted + playsinline are required; there is no autoplay on purpose -->
+    <video id="scrub" src="assets/media-generation-girl.mp4" muted playsinline preload="auto"></video>
+
+    <div class="hero-text">
+      <h1>Sai Sarvagna Beeram</h1>
+      <p class="tagline">I build production agentic AI and ML systems, from retrieval pipelines to the backends and cloud infrastructure behind them.</p>
+      <p class="credentials">MS Computer Science at Georgia State University (GPA 3.72, graduating December 2026). Published researcher (Springer ICCIDA-2024) and AWS Certified Cloud Practitioner. Open to full-time roles starting January 2027.</p>
+      <div class="hero-buttons">
+        <a class="button primary" href="#projects">View my work</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       GINGHAM ZONE: pages 2 and 3 share one pink background.
+       The canvas paints the orange reveal that follows the cursor.
+       ===================================================== -->
+  <div class="zone" id="zone">
+    <canvas class="trail" id="trail"></canvas>
+
+    <!-- PAGE 2: THINGS I'VE BUILT -->
+    <section class="projects" id="projects">
+      <h2>Things I've Built</h2>
+
+      <div class="grid">
+        
+        <a class="card" href="https://github.com/sarvagna23/vertex-agent-platform">
+          <h3>Vertex Agent Platform</h3>
+          <p>Multi-agent support analytics on Vertex AI. Agents query BigQuery vector search through an MCP server. 96.7% hit@5 retrieval over 50,000 complaints.</p>
+          <ul class="tags"><li>Google ADK</li><li>BigQuery</li><li>MCP</li><li>FastAPI</li><li>Cloud Run</li></ul>
+        </a>
+
+        <a class="card" href="https://github.com/sarvagna23/agentic-rag-pipeline">
+          <h3>Agentic RAG Pipeline</h3>
+          <p>Production agent system serving 10K+ retrieval requests per day, with routing across retrieval, reranking and synthesis agents.</p>
+          <ul class="tags"><li>LangGraph</li><li>Claude API</li><li>Pinecone</li><li>Hugging Face</li><li>AWS</li></ul>
+        </a>
+
+        <a class="card" href="https://github.com/sarvagna23/langraph-ml-platform">
+          <h3>LangGraph ML Platform</h3>
+          <p>Full-stack ML experiment tracking platform where LangGraph agents query PostgreSQL through an MCP server.</p>
+          <ul class="tags"><li>React</li><li>TypeScript</li><li>FastAPI</li><li>PostgreSQL</li><li>Docker</li></ul>
+        </a>
+
+        <a class="card" href="https://github.com/sarvagna23/Ecommerce-pipeline">
+          <h3>E-Commerce Data Pipeline</h3>
+          <p>Processes 500,000+ records end to end, from Kafka streaming to dbt models and XGBoost forecasting (R2 0.998).</p>
+          <ul class="tags"><li>Kafka</li><li>Airflow</li><li>PySpark</li><li>dbt</li><li>Snowflake</li><li>MLflow</li></ul>
+        </a>
+
+        <a class="card" href="https://github.com/sarvagna23/inventory-management">
+          <h3>Inventory Management System</h3>
+          <p>Full-stack app with a JWT gateway, GraphQL and REST APIs, real-time low-stock alerts and 3-tier RBAC.</p>
+          <ul class="tags"><li>React</li><li>Spring Boot</li><li>GraphQL</li><li>PostgreSQL</li><li>Supabase</li></ul>
+        </a>
+
+        <a class="card" href="https://github.com/sarvagna23/cicd-pipeline">
+          <h3>CI/CD Automation Pipeline</h3>
+          <p>Every push triggers tests, a Docker build and Terraform deployment to AWS in under 2 minutes.</p>
+          <ul class="tags"><li>GitHub Actions</li><li>Docker</li><li>Terraform</li><li>AWS</li><li>CloudWatch</li></ul>
+        </a>
+      </div>
+
+      <h3 class="skills-title">Skills</h3>
+      <dl class="skills">
+        <dt>Languages</dt><dd>Python, Java, TypeScript, SQL</dd>
+        <dt>AI/ML</dt><dd>LangGraph, Claude API, MCP, RAG, Hugging Face, Pinecone, PyTorch, scikit-learn</dd>
+        <dt>Backend</dt><dd>FastAPI, Spring Boot, Node.js, GraphQL, PostgreSQL, Kafka</dd>
+        <dt>Cloud/DevOps</dt><dd>AWS, Google Cloud, Docker, Terraform, GitHub Actions</dd>
+      </dl>
+    </section>
+
+    <!-- PAGE 3: WHERE I'VE WORKED -->
+    <section class="experience" id="experience">
+      <h2>Where I've Worked</h2>
+
+      <article class="job">
+        <h3>Graduate Research Assistant</h3>
+        <p class="job-meta">Georgia State University &middot; Aug 2024 to Present</p>
+        <p>Research and automation work that turns data into reliable tools.</p>
+      </article>
+
+      <article class="job">
+        <h3>Software Engineer | Open Source Contributor</h3>
+        <p class="job-meta">ECO IT Solutions &middot; Apr 2025 to Sep 2025</p>
+        <p>Built workflow automations and backend integrations that connect external APIs to internal systems.</p>
+      </article>
+
+      <article class="job">
+        <h3>AI Research Intern</h3>
+        <p class="job-meta">Ammachi Labs &middot; Aug 2023 to Jan 2024</p>
+        <p>Built and evaluated a machine learning pipeline as part of an applied research team.</p>
+      </article>
+
+      <article class="job">
+        <h3>Software Developer</h3>
+        <p class="job-meta">Code@Amrita Club &middot; Aug 2022 to Aug 2023</p>
+        <p>Developed software projects and learned engineering fundamentals through hands-on club work.</p>
+      </article>
+    </section>
+
+    <!-- CONTACT (end of page 3) -->
+    <footer class="contact" id="contact">
+      <h2>Let's talk</h2>
+      <p>I'm open to full-time roles starting January 2027.</p>
+      <div class="contact-links">
+        <a href="mailto:saisarvagnabeeram@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/saisarvagna023/">LinkedIn</a>
+        <a href="https://github.com/sarvagna23">GitHub</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
